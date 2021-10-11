@@ -1,12 +1,28 @@
+const KEY_DB = '@users'
+
 function visualize(thepage){
     document.body.setAttribute('page',thepage)
 }
 
 var registerList = {
     users:[
+        /*
         {RA:172386,name:'hugo gomes de la fuente', gender:'masculino',age:21,add:'Rua dos Calangos',phone:'99 90000-0000',email:'h172386@dac.unicamp.br'},
         {RA:000000,name:'carlota joaquina', gender:'feminino',age:246,add:'Palácio Real de Queluz',phone:'99 90000-0001',email:'carlotinha@hotmail.com'}
+        */
     ]
+}
+
+function saveDB(){
+    localStorage.setItem(KEY_DB,JSON.stringify(registerList))
+}
+
+function readDB(){
+    const data = localStorage.getItem(KEY_DB)
+    if(data){
+        registerList = JSON.parse(data) /*transforma string em dados*/
+    }
+    render()
 }
 
 function render(){
@@ -34,6 +50,7 @@ function insertUser(RA,name,gender,age,address,phone,email){
     registerList.users.push({
         RA,name,gender,age,address,phone,email
     })
+    saveDB()
     render()
     visualize('list')
 }
@@ -64,7 +81,7 @@ function submit(e){
 }
 
 window.addEventListener('load',() => {
-    render()
+    readDB()
     document.getElementById('registerRegistry').addEventListener('submit',submit)
 })
 
