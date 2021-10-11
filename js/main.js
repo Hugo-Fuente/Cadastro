@@ -1,6 +1,7 @@
 const KEY_DB = '@users'
 
-function visualize(thepage){
+function visualize(thepage, newUser=false){
+    if(novo) cleanEdit()
     document.body.setAttribute('page',thepage)
 }
 
@@ -14,6 +15,7 @@ var registerList = {
 }
 
 function saveDB(){
+    /*Negócio curioso esse viu? Ele salva em cache local de browser isso aparentemente.*/
     localStorage.setItem(KEY_DB,JSON.stringify(registerList))
 }
 
@@ -53,6 +55,16 @@ function insertUser(RA,name,gender,age,address,phone,email){
     saveDB()
     render()
     visualize('list')
+}
+
+function cleanEdit(){
+    document.getElementById('RA').value = ''
+    document.getElementById('name').value = ''
+    document.getElementById('gender').value = ''
+    document.getElementById('age').value = ''
+    document.getElementById('address').value = ''
+    document.getElementById('phone').value = ''
+    document.getElementById('email').value = ''
 }
 
 function editUser(RA,name,gender,age,address,phone,email){
