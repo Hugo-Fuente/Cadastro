@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="./css/index.css">  
-    <script type='text/javascript' src="main.js"></script>
+    <script type='text/javascript' src="./js/main.js"></script>
 
     <title>Cadastro</title>
 
@@ -46,7 +46,7 @@
         </table>
 
         <div>
-            <button (click)="visualize('registry')">Novo Usuario</button>
+            <button onclick="visualize('registry')">Novo Usuario</button>
         </div>
 
     </div>
@@ -101,6 +101,11 @@
             <div>
                 <input type="text"/>
             </div>
+        </div>
+
+        <div>
+            <button onclick="visualize('list')">Salvar</button>
+            <button onclick="visualize('list')">Cancelar</button>
         </div>
 
     </div>
