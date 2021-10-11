@@ -1,15 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Cadastro</title>
+
+    <style>
+        #registerList{display: none;}
+        #registerRegistry{display: none;}
+
+        body[page=list] #registerList{
+            display: block;
+        }
+        body[page=registry] #registerRegistry{
+            display: block;
+        }
+    </style>
+
 </head>
-<style>
-    *{margin:0;padding:0;box-sizing: border-box;}
-</style>
-<body>
-    
+
+<body page='list'>
+
+    <div id='registerList'>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>nome</th>
+                    <th>RA</th>
+                    <th>sexo</th>
+                    <th>idade</th>
+                    <th>endereço</th>
+                    <th>telefone</th>
+                    <th>e-mail</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+
+    <div id='registerRegistry'>
+        
+        <div class='label'>
+            <div>nome</div>
+            <div>
+                <input type="text"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>RA</div>
+            <div>
+                <input type="number"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>sexo</div>
+            <div>
+                <input type="checkbox"/>
+            </div>
+        </div>
+        
+        <div class='label'>
+            <div>idade</div>
+            <div>
+                <input type="number"/>
+            </div>
+        </div>
+        
+        <div class='label'>
+            <div>endereço</div>
+            <div>
+                <input type="text"/>
+            </div>
+        </div>
+        
+        <div class='label'>
+            <div>telefone</div>
+            <div>
+                <input type="tel"/>
+                <!-- tel é para chamar teclado numérico no celular -->
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>e-mail</div>
+            <div>
+                <input type="text"/>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
