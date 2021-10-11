@@ -13,3 +13,22 @@ table th, table td{
     padding: 10px 15px;
     border: solid 1px #ccc;
 }
+
+button{
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: lightblue;
+    color: #07a;
+    margin: 3px;
+    padding: 10px 15px;
+}
+
+button.gray{
+    background-color: #ccc;
+    color: #666;
+}
+
+button:hover{
+    opacity: 0.8;
+}
