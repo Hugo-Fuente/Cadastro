@@ -1,3 +1,19 @@
+/*tecnica para navegar entre exibicoes sem precisar recarregar a pagina*/
+
+#registerList{display: none;}
+#registerRegistry{
+    display: none;
+    flex-direction: column; /*um em baixo do outro, não ao lado*/
+    gap: 30px;
+}
+
+body[page=list] #registerList{
+    display: block;
+}
+body[page=registry] #registerRegistry{
+    display: flex;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -32,3 +48,19 @@ button.gray{
 button:hover{
     opacity: 0.8;
 }
+
+input{
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.label>div{
+    display: flex;
+}
+
+/*o espaço para preencher os dados agora ocupa toda a tela*/
+.label>div>input{
+    flex: 1;
+}
+

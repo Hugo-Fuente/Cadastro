@@ -11,19 +11,6 @@
 
     <title>Cadastro</title>
 
-    <!-- tecnica para navegar entre exibicoes sem precisar recarregar a pagina-->   
-    <style>
-        #registerList{display: none;}
-        #registerRegistry{display: none;}
-
-        body[page=list] #registerList{
-            display: block;
-        }
-        body[page=registry] #registerRegistry{
-            display: block;
-        }
-    </style>
-
 </head>
 
 <body page='list'>
@@ -33,8 +20,8 @@
         <table>
             <thead>
                 <tr>
-                    <th>nome</th>
                     <th>RA</th>
+                    <th>nome</th>
                     <th>sexo</th>
                     <th>idade</th>
                     <th>endereço</th>
@@ -54,16 +41,16 @@
     <div id='registerRegistry'>
         
         <div class='label'>
-            <div>nome</div>
-            <div>
-                <input type="text"/>
-            </div>
-        </div>
-
-        <div class='label'>
             <div>RA</div>
             <div>
                 <input type="number"/>
+            </div>
+        </div>
+        
+        <div class='label'>
+            <div>nome</div>
+            <div>
+                <input type="text"/>
             </div>
         </div>
 
@@ -104,8 +91,8 @@
         </div>
 
         <div>
+            <button onclick="visualize('list')" class="gray">Cancelar</button>
             <button onclick="visualize('list')">Salvar</button>
-            <button onclick="visualize('list')">Cancelar</button>
         </div>
 
     </div>
