@@ -12,7 +12,7 @@ var registerList = {
 function render(){
     const tbody = document.getElementById('bodyRegisterList')
     if(tbody){
-        tbody.value = registerList.users
+        tbody.innerHTML = registerList.users
             .sort( (a,b) => {
                 return a.name < b.name ? -1 : 1
             })
