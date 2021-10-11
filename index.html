@@ -29,7 +29,7 @@
                     <th>e-mail</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id='bodyRegisterList'></tbody>
         </table>
 
         <div>
@@ -38,47 +38,47 @@
 
     </div>
 
-    <div id='registerRegistry'>
+    <form id='registerRegistry'>
         
         <div class='label'>
             <div>RA</div>
             <div>
-                <input type="number"/>
+                <input type="number" id='RA'/>
             </div>
         </div>
         
         <div class='label'>
             <div>nome</div>
             <div>
-                <input type="text"/>
+                <input type="text" id='name'/>
             </div>
         </div>
 
         <div class='label'>
             <div>sexo</div>
             <div>
-                <input type="checkbox"/>
+                <input type="text" id='gender'/>
             </div>
         </div>
         
         <div class='label'>
             <div>idade</div>
             <div>
-                <input type="number"/>
+                <input type="number" id='age'/>
             </div>
         </div>
         
         <div class='label'>
             <div>endereço</div>
             <div>
-                <input type="text"/>
+                <input type="text" id='address'/>
             </div>
         </div>
         
         <div class='label'>
             <div>telefone</div>
             <div>
-                <input type="tel"/>
+                <input type="tel" id='phone'/>
                 <!-- tel é para chamar teclado numérico no celular -->
             </div>
         </div>
@@ -86,16 +86,16 @@
         <div class='label'>
             <div>e-mail</div>
             <div>
-                <input type="text"/>
+                <input type="text" id='email'/>
             </div>
         </div>
 
         <div>
-            <button onclick="visualize('list')" class="gray">Cancelar</button>
-            <button onclick="visualize('list')">Salvar</button>
+            <button onclick="visualize('list')" class="gray" type="button">Cancelar</button>
+            <button>Salvar</button>
         </div>
 
-    </div>
+    </form>
 
 </body>
 </html>
